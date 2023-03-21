@@ -48,7 +48,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWepackPlugin({
-      title: 'Your Amazing Shows',
+      title: 'Enjoy',
       filename: 'index.html',
       template: 'src/index.html',
     }),
