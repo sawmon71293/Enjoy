@@ -24,7 +24,7 @@ nav ul li a:active {
 
 .logo {
   width: 150px;
-  height: 150px;
+  height: 65px;
 }
 
 .card-img-top {
@@ -39,7 +39,7 @@ nav ul li a:active {
 
 main {
   flex: 1;
-  margin: 100px;
+  margin: 30px;
 }
 
 footer {
