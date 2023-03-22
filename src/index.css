@@ -67,3 +67,13 @@ footer {
 .cross {
   font-size: 3rem;
 }
+
+.like {
+  outline: none;
+  border: none;
+  background-color: white;
+}
+
+.multiple-likes {
+  color: red;
+}

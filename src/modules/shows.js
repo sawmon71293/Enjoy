@@ -15,7 +15,7 @@ const shows = async () => {
     const {
       id, name, summary, image,
     } = shows[i];
-    const likes = allLikes.filter((likes) => likes.item_id === id.toString()).length;
+    const likes = allLikes.filter((like) => parseInt(like.item_id) === id).reduce((total, like) => total + like.likes, 0);
     sanitizedData.push({
       id: id.toString(),
       name,
