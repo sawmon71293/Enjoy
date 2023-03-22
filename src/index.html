@@ -16,81 +16,15 @@
       <nav>
         <ul class="d-flex justify-content-center list-unstyled mt-5">
           <li>
-            <a class="text-decoration-none" href="#"><img class="logo" src="./images/glow.png" alt="logo"></a>
+            <a class="text-decoration-none" href="#"><img class="logo" src="images/glow.png" alt="logo"></a>
           </li>
-          <li><a class="text-decoration-none" href="#movies">Movies</a></li>
+          <li><a class="text-decoration-none" href="#movies">Movies (<span id="show-count"></span>)</a></li>
           <li><a class="text-decoration-none" href="#">Download</a></li>
           <li><a class="text-decoration-none" href="#">Favourites</a></li>
         </ul>
       </nav>
       <main>
-            <div class="row row-cols-3 g-5" id="movies">
-              <div class="col">
-                <div class="card card-sm">
-                  <img
-                    class="card-img-top"
-                    src="./images/movie1.jpg"
-                    alt="Movie 1"
-                  />
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <h5 class="card-title">Movie 1</h5>
-                      <div class="heart">
-                        <div>
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </div>
-                        <div><span>5 likes</span></div>
-                      </div>
-                    </div>
-                    <a href="#" class="mt-2 btn btn-outline-primary">Comments</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card card-sm">
-                  <img
-                    class="card-img-top"
-                    src="./images/movie2.jpg"
-                    alt="Movie 2"
-                  />
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <h5 class="card-title">Movie 2</h5>
-                      <div class="heart">
-                        <div>
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </div>
-                        <div><span>5 likes</span></div>
-                      </div>
-                    </div>
-                    <a href="#" class="btn btn-outline-primary mt-2">
-                      Comments
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card card-sm">
-                  <img
-                    class="card-img-top"
-                    src="./images/movie3.jpg"
-                    alt="Movie 3"
-                  />
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <h5 class="card-title">Movie 3</h5>
-                      <div class="heart">
-                        <div>
-                          <ion-icon name="heart-outline"></ion-icon>
-                        </div>
-                        <div><span>5 likes</span></div>
-                      </div>
-                    </div>
-                    <button type="button" class="btn btn-outline-primary mt-2" data-toggle="modal" data-target="#movieModal">Comments</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div class="row row-cols-3 g-5" id="movies"></div>
             <div class="modal fade" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
                 <div class="modal-dialog d-flex justify-content-center" role="document">
                     <div class="modal-content">
