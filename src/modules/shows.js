@@ -1,7 +1,7 @@
 import { getLikes } from './likes.js';
 import { BASE_SHOWS_URL } from './constants.js';
 
-const shows = async () => {
+export const shows = async () => {
   const sanitizedData = [];
 
   const [data, allLikes] = await Promise.all([
@@ -28,4 +28,14 @@ const shows = async () => {
   return sanitizedData;
 };
 
-export default shows;
+
+export const getShowById = async (id) => {
+  try {
+    const response = await fetch(`https://api.tvmaze.com/shows/${id}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+

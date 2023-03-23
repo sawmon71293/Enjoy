@@ -1,7 +1,8 @@
 import counter from "./modules/helper.js";
-import shows from "./modules/shows.js";
+import { shows } from "./modules/shows.js";
 import { populateView } from "./modules/render.js";
 import './index.css';
+import { popup } from './modules/popup.js';
 
 
 
@@ -18,8 +19,14 @@ const refresh = async () => {
 
 document.addEventListener('DOMContentLoaded', async () => {
   await refresh();
+  const buttons = document.querySelectorAll('[data-target]');
+  buttons.forEach((link) => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      popup();
+    });
+  });
 });
-
 
 
 

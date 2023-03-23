@@ -53,9 +53,9 @@ footer {
   align-items: flex-start;
 }
 
-.movieImg {
-  width: 350px;
-  height: 350px;
+.movie-img {
+  width: 450px;
+  height: 450px;
 }
 
 .close {

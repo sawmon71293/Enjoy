@@ -5,11 +5,11 @@ const renderCard = (id, url, name, likes, element) => {
   const card = document.createElement('div');
   card.className = 'col'
   card.innerHTML = `
-    <div class="card card-sm">
-      <img class="card-img-top" src=${url} alt=${name} />
+    <div class="card card-sm movie-card" data-id=${id}>
+      <img class="card-img-top movie-img" src=${url} alt=${name} />
       <div class="card-body">
         <div class="d-flex justify-content-between">
-          <h5 class="card-title">${name}</h5>
+          <h5 class="card-title movie-title">${name}</h5>
           <div class="heart">
             <div>
               <button class="like" data-id=${id}>
@@ -21,7 +21,7 @@ const renderCard = (id, url, name, likes, element) => {
             </div>
           </div>
         </div>
-        <a id=${id} href="#" class="btn btn-outline-primary mt-2">Comments</a>
+        <a data-id=${id} href="#" class="btn btn-outline-primary mt-2" data-toggle="modal" data-target="#movieModal">Comments</a>
       </div>
     </div>
   `;
@@ -53,4 +53,22 @@ export const populateView = async (data, element) => {
     } = data[i];
     renderCard(id, url, name, likes, element);
   }
+};
+
+
+export const show = () => {
+  const modal = document.querySelector('#movieModal');
+  modal.style.display = 'block';
+}
+
+
+export const displayMessage = (element) => {
+  element.classList.remove('d-none');// show the error message
+
+};
+
+export const clearMessage = (element) => {
+  element.innerText = '';
+  element.classList.add('d-none'); // hide the error message
+
 };
