@@ -3,9 +3,9 @@ import { postLikes } from './likes.js';
 const renderCard = (id, url, name, likes, element) => {
 
   const card = document.createElement('div');
-  card.className = 'col'
+  card.className = 'col-sm-6 col-md-4 col-lg-3'
   card.innerHTML = `
-    <div class="card card-sm movie-card" data-id=${id}>
+    <div class="card movie-card" data-id=${id}>
       <img class="card-img-top movie-img" src=${url} alt=${name} />
       <div class="card-body">
         <div class="d-flex justify-content-between">
