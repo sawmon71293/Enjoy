@@ -13,53 +13,75 @@
   </head>
   <body>
     <section class="wrapper">
-      <nav>
-        <ul class="d-flex justify-content-center list-unstyled mt-5">
-          <li>
-            <a class="text-decoration-none" href="#"><img class="logo" src="images/glow.png" alt="logo"></a>
-          </li>
-          <li><a class="text-decoration-none" href="#movies">Movies (<span id="show-count"></span>)</a></li>
-          <li><a class="text-decoration-none" href="#">Download</a></li>
-          <li><a class="text-decoration-none" href="#">Favourites</a></li>
-        </ul>
+      <nav class="ms-4 navbar navbar-expand-md navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img class="logo" src="images/glow.png" alt="logo"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#movies">Movies (<span id="show-count"></span>)</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Download</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Favourites</a>
+            </li>
+          </ul>
+        </div>
       </nav>
       <main>
-            <div class="row row-cols-3 g-5" id="movies"></div>
+            <section class="row" id="movies"></section>
             <div class="modal fade" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
-                <div class="modal-dialog d-flex justify-content-center" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <img class="movieImg" src="./images/movie3.jpg" alt="movie 3">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true" class="cross">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body d-flex justify-content-center">
-                            <div>
-                                <h3 class="modal-title" id="movieModalLabel">Movie 3</h3>
-                                <div class="movieDetail">
-                                    <p>Actors</p>
-                                    <p>Movie details</p>
-                                </div>
-                                <div>
-                                    <h6> Comments (2)</h6>
-                                    <p>03/11-2022 Alex : I loved it!</p>
-                                </div>
+              <div class="modal-dialog d-flex justify-content-center" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img class="movie-img" src="./images/movie3.jpg" alt="movie 3">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="cross">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body d-flex justify-content-center">
+                        <div>
+                            <h3 class="movie-title" id="movieModalLabel"></h3>
+                            <div class="movieDetail">
+                              <p class="genres"></p>
+                              <p class="summary"></p>
+                            </div>
+                            <div id="commentsSection">
+                                
                             </div>
                         </div>
-                        <div class="modal-footer d-flex flex-column">
-                            <div><span> Add a comment </span></div>
-                            <form id="commentForm">
-                                <div class="form-group"><input class="form-control" type="text" placeholder="your name"><br></div>
-                                <div class="form-group"><input class="form-control" type="textarea" placeholder="your insights"></div>
-                                <div class="mt-3"><button type="button" class="btn btn-primary">Comment</button></div>
-                            </form>
-                        </div>
+                    </div>
+                    <div class="modal-footer d-flex flex-column">
+                        <div><span> Add a comment </span></div>
+                        <form id="commentForm">
+                          <div class="form-group">
+                            <input class="form-control" type="text" name="name" id="username" placeholder="Your name">
+                            <div class="mt-1 alert alert-danger d-none mt-2 " id="nameError">
+                              Please enter your name.
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <textarea class="mt-2 form-control" id="insights" placeholder="Your insights" ></textarea>
+                            <div class="alert alert-danger d-none mt-2" id="commentError">
+                              Please enter your insights.
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <button type="button" class="btn btn-primary movieComment">Comment</button>
+                          </div>
+                        </form>
                     </div>
                 </div>
             </div>
+            </div>
       </main>
-     
       <footer>
         Created by Microverse under CC license
       </footer>

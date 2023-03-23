@@ -1,7 +1,7 @@
 import { getLikes } from './likes.js';
 import { BASE_SHOWS_URL } from './constants.js';
 
-const shows = async () => {
+export const shows = async () => {
   const sanitizedData = [];
 
   const [data, allLikes] = await Promise.all([
@@ -15,7 +15,7 @@ const shows = async () => {
     const {
       id, name, summary, image,
     } = shows[i];
-    const likes = allLikes.filter((likes) => likes.item_id === id.toString()).length;
+    const likes = allLikes.filter((like) => parseInt(like.item_id) === id).reduce((total, like) => total + like.likes, 0);
     sanitizedData.push({
       id: id.toString(),
       name,
@@ -28,4 +28,11 @@ const shows = async () => {
   return sanitizedData;
 };
 
-export default shows;
+
+export const getShowById = async (id) => {
+  const response = await fetch(`${BASE_SHOWS_URL}/${id}`);
+  const data = await response.json();
+  return data;
+
+}
+
