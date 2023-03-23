@@ -11,13 +11,11 @@ const renderCard = (id, url, name, likes, element) => {
         <div class="d-flex justify-content-between">
           <h5 class="card-title movie-title">${name}</h5>
           <div class="heart">
-            <div>
+            <div class="d-flex">
               <button class="like" data-id=${id}>
-                <ion-icon class="heartshape" name="heart-outline"></ion-icon>
+                <ion-icon class="heartshape " name="heart-outline"></ion-icon> 
               </button>
-            </div>
-            <div>
-              <span class="like-count">${likes}${likes === 1 ? 'Like' : 'Likes'}</span>
+              <div><span class="like-count mb-4">${likes}${likes === 1 ? 'Like' : 'Likes'}</span></div>
             </div>
           </div>
         </div>
