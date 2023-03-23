@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
 
 body {
-  font-family: 'Poppins', 'Courier New', Courier, monospace;
+  font-family: Poppins, Courier, monospace;
   margin: 0;
   padding: 0;
   min-height: 100vh;
