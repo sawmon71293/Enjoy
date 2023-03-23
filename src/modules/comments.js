@@ -9,7 +9,6 @@ export const getComments = async (movieId) => {
         const data = await response.json();
         return data;
     } catch (error) {
-        console.error('Error fetching comments:', error);
         throw new Error('Could not fetch comments. Please try again later.');
     }
 

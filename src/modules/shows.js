@@ -30,12 +30,9 @@ export const shows = async () => {
 
 
 export const getShowById = async (id) => {
-  try {
-    const response = await fetch(`https://api.tvmaze.com/shows/${id}`);
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error(error);
-  }
+  const response = await fetch(`${BASE_SHOWS_URL}/${id}`);
+  const data = await response.json();
+  return data;
+
 }
 

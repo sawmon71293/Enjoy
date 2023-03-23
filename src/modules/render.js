@@ -31,7 +31,6 @@ const renderCard = (id, url, name, likes, element) => {
   }
 
   const likeButton = card.querySelector('.like');
-
   likeButton.addEventListener('click', async () => {
     await postLikes(id);
     likes += 1;

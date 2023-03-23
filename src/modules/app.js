@@ -1,4 +1,4 @@
-import {BASE_MICROVERSE_URL} from './constants.js';
+import { BASE_MICROVERSE_URL } from './constants.js';
 
 const createApp = async () => {
   const id = localStorage.getItem('JavaScriptCapstoneAppId');

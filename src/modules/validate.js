@@ -1,6 +1,4 @@
 import { displayMessage, clearMessage } from './render.js';
-
-
 const validate = (username, comment) => {
     const name = document.getElementById('nameError');
     const commentError = document.getElementById('commentError');
