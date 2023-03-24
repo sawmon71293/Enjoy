@@ -11,7 +11,7 @@ export const shows = async () => {
     await getLikes(),
   ]);
   const shows = await data.json();
-  for (let i = 0; i < shows?.length; i += 1) {
+  for (let i = 0; i < shows.slice(0,20)?.length; i += 1) {
     const {
       id, name, summary, image,
     } = shows[i];
