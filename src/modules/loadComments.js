@@ -6,10 +6,9 @@ const loadMovieComments = async (movieId) => {
   modal.dataset.id = movieId;
   const commentsSection = modal.querySelector('#commentsSection');
   commentsSection.innerHTML = '';
-  console.log(movieId);
+
   const comments = await getComments(movieId);
 
-  console.log('comments' + comments);
   if (!Array.isArray(comments)) {
     return;
   }

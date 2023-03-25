@@ -20,23 +20,30 @@ export const popup = async (movieId) => {
   show();
   loadMovieComments(movieId);
 
-  commentFormBtn.addEventListener('click', async (event) => {
+  commentFormBtn.addEventListener('click', (event) => {
     event.preventDefault();
     const username = document.getElementById('username').value;
     const comment = document.getElementById('insights').value;
     if (validate(username, comment)) {
       giveComments({ movieId, username, comment });
-
-      const commentHeader = commentsSection.querySelector('h6');
-      const newCommentElement = document.createElement('p');
-      newCommentElement.textContent = `${new Date()
-        .toISOString()
-        .slice(0, 10)} ${username}: ${comment}`;
-      commentsSection.appendChild(newCommentElement);
-      commentHeader.textContent = `Comments (${counter(
-        commentsSection.querySelectorAll('p')
-      )})`;
+      appendNewComment(commentsSection, username, comment);
+      updateCommentHeader(commentsSection);
       commentForm.reset();
     }
   });
+
+  function appendNewComment(commentsSection, username, comment) {
+    const newCommentElement = document.createElement('p');
+    newCommentElement.textContent = `${new Date()
+      .toISOString()
+      .slice(0, 10)} ${username}: ${comment}`;
+    commentsSection.appendChild(newCommentElement);
+  }
+
+  function updateCommentHeader(commentsSection) {
+    const commentHeader = commentsSection.querySelector('h6');
+    commentHeader.textContent = `Comments (${counter(
+      commentsSection.querySelectorAll('p')
+    )})`;
+  }
 };
