@@ -6,6 +6,7 @@
     "start": "webpack serve --open",
     "test": "jest",
     "coverage": "npm test -- --coverage",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
@@ -32,7 +33,9 @@
     "copy-webpack-plugin": "^11.0.0",
     "html-loader": "^4.2.0",
     "i": "^0.3.7",
-    "stylelint": "^13.13.1"
+    "stylelint": "^13.13.1",
+     "gh-pages": "^5.0.0"
+
   },
   "description": "<a name=\"readme-top\"></a>",
   "main": "index.js",
