@@ -5,7 +5,8 @@
     "build": "webpack --config webpack.config.js",
     "start": "webpack serve --open",
     "test": "jest",
-    "coverage": "npm test -- --coverage"
+    "coverage": "npm test -- --coverage",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",
@@ -30,6 +31,7 @@
     "babel-eslint": "^10.1.0",
     "copy-webpack-plugin": "^11.0.0",
     "html-loader": "^4.2.0",
+    "i": "^0.3.7",
     "stylelint": "^13.13.1"
   },
   "description": "<a name=\"readme-top\"></a>",
