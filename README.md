@@ -1,8 +1,8 @@
 <a name="readme-top"></a>
 
 # Preview 
-![movies](https://user-images.githubusercontent.com/102650102/227714287-0706b2d1-ec17-4752-8cb4-9d84cbbf9af5.jpg)
 
+![movies](https://user-images.githubusercontent.com/102650102/227714323-b0eb14f8-a659-4150-aa63-afca5d0607bc.jpg)
 
 
 # 📗 Table of Contents
