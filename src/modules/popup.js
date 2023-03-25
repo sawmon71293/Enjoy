@@ -26,8 +26,8 @@ export const popup = async (movieId) => {
     const comment = document.getElementById('insights').value;
     if (validate(username, comment)) {
       giveComments({ movieId, username, comment });
-      appendNewComment(commentsSection, username, comment);
       updateCommentHeader(commentsSection);
+      appendNewComment(commentsSection, username, comment);
       commentForm.reset();
     }
   });
@@ -41,9 +41,15 @@ export const popup = async (movieId) => {
   }
 
   function updateCommentHeader(commentsSection) {
-    const commentHeader = commentsSection.querySelector('h6');
-    commentHeader.textContent = `Comments (${counter(
-      commentsSection.querySelectorAll('p')
-    )})`;
+    let commentHeader = commentsSection.querySelector('h6');
+    if (commentHeader != null) {
+      commentHeader.textContent = `Comments (${
+        counter(commentsSection.querySelectorAll('p')) + 1
+      })`;
+    } else {
+      commentHeader = document.createElement('h6');
+      commentHeader.textContent = 'Comments(1)';
+      commentsSection.appendChild(commentHeader);
+    }
   }
 };

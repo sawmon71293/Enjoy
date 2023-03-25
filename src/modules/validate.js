@@ -3,17 +3,17 @@ const validate = (username, comment) => {
   const name = document.getElementById('nameError');
   const commentError = document.getElementById('commentError');
   if (!username) {
+    console.log(!username);
     displayMessage(name);
     return false;
-  } else {
-    clearMessage(name);
   }
+
   if (!comment) {
     displayMessage(commentError);
     return false;
-  } else {
-    clearMessage(commentError);
   }
+  clearMessage(name);
+  clearMessage(commentError);
 
   return true;
 };
