@@ -11,11 +11,11 @@ export const shows = async () => {
     await getLikes(),
   ]);
   const shows = await data.json();
-  for (let i = 0; i < shows.slice(0,20)?.length; i += 1) {
-    const {
-      id, name, summary, image,
-    } = shows[i];
-    const likes = allLikes.filter((like) => parseInt(like.item_id) === id).reduce((total, like) => total + like.likes, 0);
+  for (let i = 0; i < shows.slice(0, 20)?.length; i += 1) {
+    const { id, name, summary, image } = shows[i];
+    const likes = allLikes
+      .filter((like) => parseInt(like.item_id) === id)
+      .reduce((total, like) => total + like.likes, 0);
     sanitizedData.push({
       id: id.toString(),
       name,
@@ -28,11 +28,9 @@ export const shows = async () => {
   return sanitizedData;
 };
 
-
 export const getShowById = async (id) => {
   const response = await fetch(`${BASE_SHOWS_URL}/${id}`);
   const data = await response.json();
+  console.log(data);
   return data;
-
-}
-
+};

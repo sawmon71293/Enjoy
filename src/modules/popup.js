@@ -1,62 +1,49 @@
-import { getComments, giveComments } from './comments.js';
+import { giveComments } from './comments.js';
 import { getShowById } from './shows.js';
 import { show } from './render.js';
 import validate from './validate.js';
+import loadMovieComments from './loadComments.js';
+import counter from './helper.js';
 
-export const popup = () => {
-    const movieCards = document.querySelectorAll('.movie-card');
-    movieCards.forEach(movieCard => {
-        movieCard.addEventListener('click', async () => {
+export const popup = async (movieId) => {
+  const modal = document.querySelector('#movieModal');
+  const commentFormBtn = modal.querySelector('.movieComment');
+  const commentForm = document.querySelector('#commentForm');
+  const commentsSection = modal.querySelector('#commentsSection');
+  commentsSection.innerHTML = '';
 
-            const movieTitle = movieCard.querySelector('.movie-title').textContent;
-            const movieImgSrc = movieCard.querySelector('.movie-img').src;
-            const modal = document.querySelector('#movieModal');
-            const commentFormBtn = modal.querySelector('.movieComment');
-            const commentForm = document.querySelector('#commentForm');
-            const commentsSection = modal.querySelector('#commentsSection');
-            commentsSection.innerHTML = '';
+  const data = await getShowById(movieId);
+  modal.querySelector('.movie-title').textContent = data.name;
+  modal.querySelector('.movie-img').src = data.image.original;
+  modal.querySelector('.summary').innerHTML = data.summary;
+  modal.querySelector('.genres').textContent = data.genres;
+  show();
+  loadMovieComments(movieId);
 
-            const movieId = movieCard.dataset.id;
-            const data = await getShowById(movieId);
-            let comments = await getComments(movieId);
-            if (Array.isArray(comments)) {
-                const commentHeader = document.createElement('h6');
-                commentHeader.textContent = `Comments(${comments.length += 1})`;
-                commentsSection.appendChild(commentHeader);
-                comments.forEach(comment => {
-                    const commentElement = document.createElement('p');
-                    commentElement.textContent = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
-                    commentsSection.appendChild(commentElement);
-                });
-            }
+  commentFormBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const comment = document.getElementById('insights').value;
+    if (validate(username, comment)) {
+      giveComments({ movieId, username, comment });
+      appendNewComment(commentsSection, username, comment);
+      updateCommentHeader(commentsSection);
+      commentForm.reset();
+    }
+  });
 
+  function appendNewComment(commentsSection, username, comment) {
+    const newCommentElement = document.createElement('p');
+    newCommentElement.textContent = `${new Date()
+      .toISOString()
+      .slice(0, 10)} ${username}: ${comment}`;
+    commentsSection.appendChild(newCommentElement);
+  }
 
-
-            modal.querySelector('.movie-title').textContent = movieTitle;
-            modal.querySelector('.movie-img').src = movieImgSrc;
-            modal.querySelector('.summary').innerHTML = data.summary;
-            modal.querySelector('.genres').textContent = data.genres;
-            show();
-
-
-
-            commentFormBtn.addEventListener('click', async (event) => {
-                event.preventDefault();
-                const username = document.getElementById('username').value;
-                const comment = document.getElementById('insights').value;
-                if (validate(username, comment)) {
-                    giveComments({ movieId, username, comment });
-                    const newCommentElement = document.createElement('p');
-                    newCommentElement.textContent = `${new Date().toISOString().slice(0, 10)} ${username}: ${comment}`;
-                    commentsSection.appendChild(newCommentElement);
-                    commentForm.reset();
-                }
-
-
-            });
-        });
-    });
-
-
-
-}
+  function updateCommentHeader(commentsSection) {
+    const commentHeader = commentsSection.querySelector('h6');
+    commentHeader.textContent = `Comments (${counter(
+      commentsSection.querySelectorAll('p')
+    )})`;
+  }
+};
