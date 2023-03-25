@@ -13,10 +13,13 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
 - [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
+  
   - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
   - [Install](#install)
-  - [Usage](#usage)
+  - [Deployment](#deployment)
+  - [Live](#live)
+  
 - [👥 Authors](#authors)
 - [🤝 Contribution](#contributing)
 - [⭐️ Show your support](#support)
@@ -84,6 +87,9 @@ You can deploy this project using:
 
 - gitHub pages/
 - npm run build
+
+### Live
+- Live at : [@live](https://sawmon71293.github.io/JavaScriptCapstone/)
 
 <!-- AUTHORS -->
 
