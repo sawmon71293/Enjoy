@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+    />
+  <script defer src="main.js"></script></head>
+  <body>
+    <section class="wrapper">
+      <nav class="ms-4 navbar navbar-expand-md navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img class="logo" src="img/glow.png" alt="logo"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#movies">Movies (<span id="show-count"></span>)</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Download</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Favourites</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <main>
+            <section class="row" id="movies"></section>
+            <div class="modal fade" id="movieModal" tabindex="-1" dataset-id="0" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+              <div class="modal-dialog d-flex justify-content-center" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img class="movie-img" src="img/movie3.jpg" alt="movie 3">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="cross">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body d-flex justify-content-center">
+                        <div>
+                            <h3 class="movie-title" id="movieModalLabel"></h3>
+                            <div class="movieDetail">
+                              <p class="genres"></p>
+                              <p class="summary"></p>
+                            </div>
+                            <div id="commentsSection">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex flex-column">
+                        <div><span> Add a comment </span></div>
+                        <form id="commentForm">
+                          <div class="form-group">
+                            <input class="form-control" type="text" name="name" id="username" placeholder="Your name">
+                            <div class="mt-1 alert alert-danger d-none mt-2 " id="nameError">
+                              Please enter your name.
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <textarea class="mt-2 form-control" id="insights" placeholder="Your insights" ></textarea>
+                            <div class="alert alert-danger d-none mt-2" id="commentError">
+                              Please enter your insights.
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <button type="button" class="btn btn-primary movieComment">Comment</button>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+      </main>
+      <footer>
+        Created by Microverse under CC license
+      </footer>
+    </section>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<!-- Popper.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
