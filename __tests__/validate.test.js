@@ -28,6 +28,6 @@ describe('validate function', () => {
     const result = validate('username', 'comment');
     expect(result).toBe(true);
     expect(displayMessage).not.toHaveBeenCalled();
-    expect(clearMessage).toHaveBeenCalledTimes(2);
+    expect(clearMessage).toHaveBeenCalledTimes(1);
   });
 });
