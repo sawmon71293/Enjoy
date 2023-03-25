@@ -18,7 +18,8 @@
   - [Setup](#setup)
   - [Install](#install)
   - [Deployment](#deployment)
-  - [Live](#live)
+  - [Live](#live) 
+  - [Video Description](#video)
   
 - [👥 Authors](#authors)
 - [🤝 Contribution](#contributing)
@@ -90,6 +91,9 @@ You can deploy this project using:
 
 ### Live
 - Live at : [@live](https://sawmon71293.github.io/JavaScriptCapstone/)
+
+### Video
+- Video Description : [@Video](https://drive.google.com/file/d/1OKLjhWe-VZ22WEt02plh9VgG_t6AvtAz/view?usp=share_link)
 
 <!-- AUTHORS -->
 
