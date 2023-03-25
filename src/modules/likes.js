@@ -10,7 +10,7 @@ export const getLikes = async () => {
   try {
     data = await likes.json();
   } catch (err) {
-    throw new Error(err);
+    data = [];
   }
   return data;
 };
