@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`loadMovieComments should load comments for the specified movie ID and update the modal 1`] = `"<h6>Comments (2)</h6><p>2022-01-01 user1: Comment 1</p><p>2022-01-02 user2: Comment 2</p>"`;

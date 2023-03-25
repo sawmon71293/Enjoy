@@ -1,6 +1,9 @@
 <a name="readme-top"></a>
 
-![S](https://user-images.githubusercontent.com/102650102/212134190-7ac324a6-f323-4c2b-ac30-44add2cedd26.png)
+# Preview 
+
+![movies](https://user-images.githubusercontent.com/102650102/227714323-b0eb14f8-a659-4150-aa63-afca5d0607bc.jpg)
+
 
 # 📗 Table of Contents
 
@@ -10,11 +13,16 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
 - [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
+  
   - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
   - [Install](#install)
-  - [Usage](#usage)
+  - [Deployment](#deployment)
+  - [Live](#live) 
+  - [Video Description](#video)
+  
 - [👥 Authors](#authors)
+- [🔭 Future Features](#features)
 - [🤝 Contribution](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -82,6 +90,12 @@ You can deploy this project using:
 - gitHub pages/
 - npm run build
 
+### Live
+- Live at : [@live](https://sawmon71293.github.io/JavaScriptCapstone/)
+
+### Video
+- Video Description : [@Video](https://drive.google.com/file/d/1OKLjhWe-VZ22WEt02plh9VgG_t6AvtAz/view?usp=share_link)
+
 <!-- AUTHORS -->
 
 ## 👥 Author <a name="authors"></a>
@@ -98,6 +112,10 @@ You can deploy this project using:
 - Twitter: [@Twitterhandle](https://twitter.com/bataringaya_ben)
 - LinkedIn:[LinkedIn](https://www.linkedin.com/in/benard-asiimwe-bataringaya-4b673672/)
 
+## 🔭 Future Features <a name="features"></a>
+ -  Add more pages
+ -  Download functionality
+ -  Update UI 
 
 <!-- CONTRIBUTING -->
 
