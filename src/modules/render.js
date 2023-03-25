@@ -63,3 +63,5 @@ export const displayMessage = (element) => {
 export const clearMessage = (element) => {
   element.classList.add('d-none'); // hide the error message
 };
+
+

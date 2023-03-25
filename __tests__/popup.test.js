@@ -10,6 +10,7 @@ jest.mock('../src/modules/loadComments.js');
 // mock the show function
 jest.mock('../src/modules/render.js', () => ({
   show: jest.fn(),
+  clearMessage: jest.fn(),
 }));
 
 describe('popup function', () => {
