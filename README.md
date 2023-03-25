@@ -22,6 +22,7 @@
   - [Video Description](#video)
   
 - [👥 Authors](#authors)
+- [🔭 Future Features](#features)
 - [🤝 Contribution](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -111,6 +112,10 @@ You can deploy this project using:
 - Twitter: [@Twitterhandle](https://twitter.com/bataringaya_ben)
 - LinkedIn:[LinkedIn](https://www.linkedin.com/in/benard-asiimwe-bataringaya-4b673672/)
 
+## 🔭 Future Features < a name="features"></a>
+ [] Add more pages
+ [] Download functionality
+ [] Update UI 
 
 <!-- CONTRIBUTING -->
 
