@@ -1,9 +1,8 @@
 <a name="readme-top"></a>
 
-# Preview 
+# Preview
 
 ![movies](https://user-images.githubusercontent.com/102650102/227714323-b0eb14f8-a659-4150-aa63-afca5d0607bc.jpg)
-
 
 # 📗 Table of Contents
 
@@ -12,15 +11,16 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+
 - [💻 Getting Started](#getting-started)
-  
+
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
   - [Install](#install)
   - [Deployment](#deployment)
-  - [Live](#live) 
+  - [Live](#live)
   - [Video Description](#video)
-  
+
 - [👥 Authors](#authors)
 - [🔭 Future Features](#features)
 - [🤝 Contribution](#contributing)
@@ -30,7 +30,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 LeaderBoard <a name="about-project"></a>
+# 📖 JavaScript Capstone <a name="about-project"></a>
 
 **JavaScript Capstone** is an app utilizing ES6 modules, ES6 syntax, callback, promises, webpack, sending and receiving data from an API, AAA pattern for unit tests, gitflow, asynchronous usage, code reviewing practices.
 
@@ -91,9 +91,11 @@ You can deploy this project using:
 - npm run build
 
 ### Live
+
 - Live at : [@live](https://sawmon71293.github.io/JavaScriptCapstone/)
 
 ### Video
+
 - Video Description : [@Video](https://drive.google.com/file/d/1OKLjhWe-VZ22WEt02plh9VgG_t6AvtAz/view?usp=share_link)
 
 <!-- AUTHORS -->
@@ -113,9 +115,10 @@ You can deploy this project using:
 - LinkedIn:[LinkedIn](https://www.linkedin.com/in/benard-asiimwe-bataringaya-4b673672/)
 
 ## 🔭 Future Features <a name="features"></a>
- -  Add more pages
- -  Download functionality
- -  Update UI 
+
+- Add more pages
+- Download functionality
+- Update UI
 
 <!-- CONTRIBUTING -->
 
