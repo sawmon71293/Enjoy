@@ -32,7 +32,7 @@
 
 # 📖 JavaScript Capstone <a name="about-project"></a>
 
-**JavaScript Capstone** is an app utilizing ES6 modules, ES6 syntax, callback, promises, webpack, sending and receiving data from an API, AAA pattern for unit tests, gitflow, asynchronous usage, code reviewing practices.
+**Enjoy** is an app utilizing ES6 modules, ES6 syntax, callback, promises, webpack, sending and receiving data from an API, AAA pattern for unit tests, gitflow, asynchronous usage, code reviewing practices.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -73,7 +73,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd your-folder
-  git clone git@github.com:sawmon71293/JavaScriptCapstone.git
+  git clone git@github.com:sawmon71293/Enjoy.git
 ```
 
 ### Install
@@ -92,7 +92,7 @@ You can deploy this project using:
 
 ### Live
 
-- Live at : [@live](https://sawmon71293.github.io/JavaScriptCapstone/)
+- Live at : [@live](https://sawmon71293.github.io/Enjoy/)
 
 ### Video
 
