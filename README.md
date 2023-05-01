@@ -30,9 +30,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 JavaScript Capstone <a name="about-project"></a>
+# 📖 Enjoy <a name="about-project"></a>
 
-**Enjoy** is an app utilizing ES6 modules, ES6 syntax, callback, promises, webpack, sending and receiving data from an API, AAA pattern for unit tests, gitflow, asynchronous usage, code reviewing practices.
+**Enjoy**, JavaScript Capstone, is an app utilizing ES6 modules, ES6 syntax, callback, promises, webpack, sending and receiving data from an API, AAA pattern for unit tests, gitflow, asynchronous usage, code reviewing practices.
 
 ## 🛠 Built With <a name="built-with"></a>
 
